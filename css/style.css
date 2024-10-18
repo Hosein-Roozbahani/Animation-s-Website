@@ -1,28 +1,128 @@
-*,body{
+@font-face {
+    font-family: 'BodoniMode-italic';
+    src: url('/fonts/BodoniModa-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'BodoniMode';
+    src: url('/fonts/BodoniModa-VariableFont_opsz,wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'DancingScript-normal';
+    src: url('/fonts/DancingScript-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'DancingScript-bold';
+    src: url('/fonts/DancingScript-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'DancingScript-medium';
+    src: url('/fonts/DancingScript-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'DancingScript-semibold';
+    src: url('/fonts/DancingScript-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'DancingScript-Regular';
+    src: url('/fonts/DancingScript-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'GreatVibes-Regular';
+    src: url('/fonts/GreatVibes-Regular.ttf') format('truetype');
+}
+
+*,
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+
 }
-a{
+
+a {
     text-decoration: none;
 }
-ul,li,ol{
+
+ul,
+li,
+ol {
     margin: 0;
     padding: 0;
     list-style: none;
 }
-section{
+
+section {
     height: 100vh;
 }
-.first-img{
+
+.first-img {
     width: 100%;
-    height: 70vh;
-    /* background: fixed cover center; */
+    height: 60vh;
     clip-path: polygon(0 0, 100% 0, 100% 95%, 90% 90%, 80% 95%, 70% 90%, 60% 95%, 50% 90%, 40% 95%, 30% 90%, 20% 95%, 10% 90%, 0 95%, 0 100%);
 }
-.second-img{
+.second-img {
     width: 100%;
     height: 100vh;
     background: fixed cover center;
 }
+/* styling for the first-section*/
+
+.titles-wedding {
+    display: grid;
+    justify-content: center;
+    margin-top: 7rem;
+    margin-left: 2rem;
+}
+
+.first-section-title , .thrid-section-title {
+    font-family: 'BodoniMode';
+    font-weight: 200;
+    font-size: 2.2rem;  
+}
+.warpper{
+    display: grid;
+}
+.second-section-title{
+    font-family: 'GreatVibes-Regular';
+    font-weight: 100;
+    position: relative;
+    right: 2rem;
+}
+/* styling for the second-section*/
+.first-image{
+    position: relative;
+}
+.titles-first-image {  
+    position: absolute;  
+    top: 10%; /* مقدار top را مطابق با نیاز خود تنظیم کنید */  
+    left: 50%;  
+    transform: translateX(-50%);  
+    color: #e6e6e6;  
+    text-align: center;
+    z-index: 10;
+    font-size: .5rem;
+    font-weight: 100;
+    font-family: serif;
+}
+.couples-name{
+    text-align: center;
+    line-height: 2.5rem;
+}  
+.grooms-name,.brides-name{
+    font-family: 'BodoniMode-italic';
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+.distance-between-couples-name{
+    font-family: 'GreatVibes-Regular';
+    font-weight: 100;
+    font-size: 4rem;
+}
+
