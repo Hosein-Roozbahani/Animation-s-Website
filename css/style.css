@@ -69,6 +69,9 @@ section {
     cursor: pointer;
     position: relative;
     top:-1.7rem;  
+    animation: logoAnimation 0.5s forwards;
+    /* opacity: 0;
+    transition: opacity 0.5s ease;  */
 }
 @media (min-width: 500px) {
     .logo-img{
@@ -113,19 +116,23 @@ section {
     animation: shine 3s infinite linear;
     animation-fill-mode: forwards;
     -webkit-text-size-adjust: none;
-    font-weight: 600;
-    font-size: 16px;
     text-decoration: none;
     white-space: nowrap;
 }
-
 .first-section-title {
     border-top: 2px solid lightslategray;
+   animation: slideIn 1s ease-out forwards;
+}
+.second-section-title {
+    font-family: 'GreatVibes-Regular';
+    font-weight: 100;
+    animation: slideIn 1s ease-out forwards;
 }
 
 .thrid-section-title {
     border-bottom: 2px solid lightslategray;
     padding-bottom: 10px;
+    animation: slideIn 1s ease-out forwards;
 }
 
 .first-section-title,
@@ -133,11 +140,6 @@ section {
     font-family: 'BodoniMode';
     font-weight: 200;
     font-size: 2.2rem;
-}
-
-.second-section-title {
-    font-family: 'GreatVibes-Regular';
-    font-weight: 100;
 }
 
 /* styling for the second-section*/
@@ -412,3 +414,14 @@ section {
         background-position: 180px;
     }
 }
+
+@keyframes logoAnimation {  
+    from {  
+        opacity: 0;   
+        transform: translateY(-20px);  
+    }  
+    to {  
+        opacity: 1;   
+        transform: translateY(0);     
+    }  
+}  
