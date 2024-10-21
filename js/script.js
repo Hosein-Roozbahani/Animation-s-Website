@@ -1,16 +1,27 @@
 const sr = ScrollReveal({
-    origin: 'top',
+    origin: 'bottom',
     distance: '60px',
     duration: 2500,
     delay: 500
 })
 sr.reveal('.first-section , .second-section , .third-section, fourth-section, .fifth-section, .sixth-section');
 sr.reveal('.titles-wedding ', {delay:600});
-sr.reveal('.second-img ', {delay:900});
+sr.reveal('.first-image ', {delay:999});
+sr.reveal('.second-img ', {delay:999});
+sr.reveal('.titles-first-image ', {delay:600});
 sr.reveal('.couples-name ', {delay:600});
 sr.reveal('.dates', {delay:600});
 sr.reveal('.address', {delay:999});
-sr.reveal('.explained-from-the-bride-groom', {delay:999});
+sr.reveal('.R-S-V-P', {delay:600});
+sr.reveal('.program-title', {delay:500});
+sr.reveal('.first-timing', {delay:600});
+sr.reveal('.ceremony-title', {delay:700});
+sr.reveal('.second-timing', {delay:800});
+sr.reveal('.second-timing', {delay:900});
+sr.reveal('.last-timing', {delay:999});
+sr.reveal('.dates-and-emails', {delay:800});
+sr.reveal('.explained-from-the-bride-groom', {delay:600});
+sr.reveal('.websites-address', {delay:600});
 
 
 
