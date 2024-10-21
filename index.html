@@ -7,6 +7,7 @@
     <title>Animation's-Website</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
 <body>
@@ -16,7 +17,7 @@
             <img src="/images/logo1.jpg" class="logo-img" alt="">
         </span>
         <div class="titles-wedding warpper" id="titles-wedding">
-            <h1  class="first-section-title">YOU'RE</h1>
+            <h1 class="first-section-title">YOU'RE</h1>
             <h2 class="second-section-title">WEDDING</h2>
             <h1 class="thrid-section-title">INVITED</h1>
         </div>
@@ -31,9 +32,9 @@
             </div>
         </div>
         <div class="couples-name">
-            <h1 class="grooms-name animate__animated animate__fadeInLeft">MANDY</h1>
-            <h3 class="distance-between-couples-name animate__animated animate__fadeInLeft">and</h3>
-            <h1 class="brides-name animate__animated animate__fadeInLeft">CHRIS</h1>
+            <h1 class="grooms-name animate__animated animate__backInUp">MANDY</h1>
+            <h3 class="distance-between-couples-name animate__animated animate__backInUp">and</h3>
+            <h1 class="brides-name animate__animated animate__backInUp">CHRIS</h1>
         </div>
     </section>
 
@@ -70,7 +71,8 @@
             <div class="Mindy-and-Chris animate__animated animate__backInLeft">Mindy&Chris@gmail.com</div>
         </div>
         <div class="explained-from-the-bride-groom">
-            <p class="animate__animated animate__backInRight">and kindly let us know if you wanna join us in this celebration of love</p>
+            <p class="animate__animated animate__backInRight">and kindly let us know if you wanna join us in this
+                celebration of love</p>
         </div>
     </section>
 
@@ -146,8 +148,13 @@
             <p>www.Mindy&Chris.com</p>
         </div>
     </section>
-
+    <script>
+        ScrollReveal().reveal('.titles-wedding , .second-section', { duration: 2000 });
+    </script>
+    <script src="/js/script.js"></script>
+    <script src="/js/scrollreveal.min.js"></script>
+    <!-- <script src="/js/swiper.bundle.min.js"></script> -->
 </body>
-<script src="/js/script.js"></script>
+
 
 </html>

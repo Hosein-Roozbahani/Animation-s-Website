@@ -37,21 +37,28 @@ ol {
     padding: 0;
     list-style: none;
 }
+img{
+    transition: all .5s !important;
+}
 
 section {
     height: 100vh;
+    animation: CSSscrollReveal ease-in-out both ;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
 }
 
 .first-img {
     width: 100%;
     height: 60vh;
     object-fit: cover;
-    transition: all .5s;
+    transition: all .5s !important;
+    cursor: pointer;
     clip-path: polygon(0 0, 100% 0, 100% 95%, 90% 90%, 80% 95%, 70% 90%, 60% 95%, 50% 90%, 40% 95%, 30% 90%, 20% 95%, 10% 90%, 0 95%, 0 100%);
 }
 
 .first-img:hover {
-    transform: scale(1.1);
+    transform: scale(1.1) !important;
 }
 
 .second-img {
@@ -70,8 +77,8 @@ section {
     position: relative;
     top:-1.7rem;  
     animation: logoAnimation 0.5s forwards;
-    /* opacity: 0;
-    transition: opacity 0.5s ease;  */
+    opacity: 0;
+    transition: opacity 0.5s ease; 
 }
 @media (min-width: 500px) {
     .logo-img{
@@ -111,28 +118,27 @@ section {
     color: #fff;
     background: linear-gradient(to right, #9f9f9f 0, #fff 10%, #868686 20%);
     background-position: 0;
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: shine 3s infinite linear;
     animation-fill-mode: forwards;
     -webkit-text-size-adjust: none;
     text-decoration: none;
     white-space: nowrap;
+    text-shadow:  2px 2px 5px rgba(255, 0, 0, 0.5), 0 0 25px rgba(255, 165, 0, 0.5);
 }
 .first-section-title {
     border-top: 2px solid lightslategray;
-   animation: slideIn 1s ease-out forwards;
+    
 }
 .second-section-title {
     font-family: 'GreatVibes-Regular';
     font-weight: 100;
-    animation: slideIn 1s ease-out forwards;
 }
 
 .thrid-section-title {
     border-bottom: 2px solid lightslategray;
     padding-bottom: 10px;
-    animation: slideIn 1s ease-out forwards;
 }
 
 .first-section-title,
@@ -146,6 +152,7 @@ section {
 .first-image {
     overflow: hidden;
     position: relative;
+    transition: all .5s !important;
 }
 
 .titles-first-image {
@@ -171,7 +178,6 @@ section {
 
 .couples-name:hover {
     transform: translateY(-20px);
-
 }
 
 .grooms-name,
@@ -276,6 +282,7 @@ section {
     font-size: 2rem;
     color: rgb(167, 167, 167);
     margin-top: 4rem;
+    text-shadow:  2px 2px 5px rgba(255, 0, 0, 0.5), 0 0 25px rgba(255, 165, 0, 0.5);
 }
 
 /* styling the fifth section*/
@@ -425,3 +432,17 @@ section {
         transform: translateY(0);     
     }  
 }  
+
+@keyframes CSSscrollReveal {
+    from 
+    {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to 
+    {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
