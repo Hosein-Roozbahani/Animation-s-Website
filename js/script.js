@@ -1,8 +1,9 @@
 const sr = ScrollReveal({
     origin: 'bottom',
     distance: '60px',
-    duration: 2500,
-    delay: 500
+    duration: 2000,
+    delay: 500,
+    reset: true
 })
 sr.reveal('.first-section , .second-section , .third-section, fourth-section, .fifth-section, .sixth-section');
 sr.reveal('.titles-wedding ', {delay:600});
@@ -21,7 +22,11 @@ sr.reveal('.second-timing', {delay:900});
 sr.reveal('.last-timing', {delay:999});
 sr.reveal('.dates-and-emails', {delay:800});
 sr.reveal('.explained-from-the-bride-groom', {delay:600});
-sr.reveal('.websites-address', {delay:600});
+sr.reveal('.detail-title', {delay:600});
+sr.reveal('.details-reception', {delay:750});
+sr.reveal('.best-wedding-title', {delay:870});
+sr.reveal('.information', {delay:950});
+sr.reveal('.websites-address-gradient', {delay:999});
 
 
 
