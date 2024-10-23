@@ -1,17 +1,17 @@
 @font-face {
     font-family: 'BodoniMode-italic';
-    src: url('/fonts/BodoniModa-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+    src: url('/assets/fonts/BodoniModa-Italic-VariableFont_opsz\,wght.ttf') format('truetype');
     font-style: italic;
 }
 
 @font-face {
     font-family: 'BodoniMode';
-    src: url('/fonts/BodoniModa-VariableFont_opsz,wght.ttf') format('truetype');
+    src: url('/assets/fonts/BodoniModa-VariableFont_opsz\,wght.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'GreatVibes-Regular';
-    src: url('/fonts/GreatVibes-Regular.ttf') format('truetype');
+    src: url('/assets/fonts/GreatVibes-Regular.ttf') format('truetype');
 }
 
 /* scroll styling */
@@ -170,7 +170,7 @@ section {
 
 .couples-name {
     text-align: center;
-    line-height: 3.5rem;
+    line-height: 4rem;
     margin-top: 4rem;
     cursor: pointer;
     transition: all .5s;
