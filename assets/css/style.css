@@ -1,17 +1,17 @@
 @font-face {
     font-family: 'BodoniMode-italic';
-    src: url('./assets/fonts/BodoniModa-Italic-VariableFont_opsz\,wght.ttf') format('truetype');
+    src: url(/assets/fonts/BodoniModa-Italic-VariableFont_opsz\,wght.ttf) format('truetype');
     font-style: italic;
 }
 
 @font-face {
     font-family: 'BodoniMode';
-    src: url('./assets/fonts/BodoniModa-VariableFont_opsz\,wght.ttf') format('truetype');
+    src: url(/assets/fonts/BodoniModa-VariableFont_opsz\,wght.ttf) format('truetype');
 }
 
 @font-face {
     font-family: 'GreatVibes-Regular';
-    src: url('./assets/fonts/GreatVibes-Regular.ttf') format('truetype');
+    src: url(/assets/fonts/GreatVibes-Regular.ttf) format('truetype');
 }
 
 /* scroll styling */
