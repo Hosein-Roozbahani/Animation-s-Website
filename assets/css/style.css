@@ -111,10 +111,11 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    /* position: absolute; */
+    /* top: 50%;
+    left: 50%; */
+    
+    /* transform: translate(-50%, -50%); */
     padding: 12px 48px;
     color: #fff;
     background: linear-gradient(to right, #9f9f9f 0, #fff 10%, #868686 20%);
@@ -127,6 +128,7 @@ section {
     text-decoration: none;
     white-space: nowrap;
     text-shadow:  2px 2px 5px rgba(255, 0, 0, 0.5), 0 0 25px rgba(255, 165, 0, 0.5);
+    margin-top: 10rem;
 }
 .first-section-title {
     border-top: 2px solid lightslategray;
@@ -158,7 +160,7 @@ section {
 
 .titles-first-image {
     position: absolute;
-    top: 7%;
+    top: 10%;
     left: 50%;
     transform: translateX(-50%);
     color: #fff;
@@ -166,12 +168,12 @@ section {
     z-index: 10;
     font-weight: 100;
     font-family: serif;
+    line-height: .3rem;
 }
 
 .couples-name {
     text-align: center;
-    line-height: 4rem;
-    margin-top: 4rem;
+    margin-top: 1rem;
     cursor: pointer;
     transition: all .5s;
     text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.5), 0 0 25px rgba(255, 165, 0, 0.5);
@@ -186,6 +188,7 @@ section {
     font-family: 'BodoniMode-italic';
     font-weight: 500;
     font-size: 4.5rem;
+    line-height: 3rem;
 }
 
 .distance-between-couples-name {
@@ -225,11 +228,11 @@ section {
 
 .dates {
     text-align: center;
-    margin-top: 25rem;
-    line-height: 5rem;
+    margin-top: 20rem ;
 }
 
 .dates>h1 {
+    line-height: 5rem;
     color: #fff;
     font-size: 5.5rem;
     font-family: 'BodoniMode';
@@ -239,14 +242,12 @@ section {
 .address {
     color: #eaeaea;
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 3rem;
 }
 
 /* styling the for the fourth section */
-.fourth-section,
-.fifth-section,
-.sixth-section {
-    text-align: center;
+#fourth-section, #fifth-section, #sixth-section{
+    text-align: center !important;
 }
 
 .please-word {
@@ -256,9 +257,11 @@ section {
 
 .R-S-V-P {
     font-family: 'BodoniMode';
-    font-size: 8rem;
-    line-height: 10rem;
     margin-top: 2.5rem;
+}
+.R-S-V-P >h1 {
+    font-size: 10rem;
+    line-height: 9rem;
 }
 
 .dates-and-emails {
@@ -268,7 +271,9 @@ section {
 
 .date {
     font-size: 2rem;
-    margin-bottom: .2rem;
+}
+.date > p {
+    margin-bottom: 0;
 }
 .Mindy-and-Chris{
     transition: all .5s;
@@ -284,12 +289,13 @@ section {
     color: rgb(167, 167, 167);
     margin-top: 4rem;
     text-shadow:  2px 2px 5px rgba(255, 0, 0, 0.5), 0 0 25px rgba(255, 165, 0, 0.5);
+    text-align: center;
 }
 
 /* styling the fifth section*/
 
 .program-title>.title-of-fifth-section {
-    margin-top: 1rem;
+    margin-top: .3rem;
     font-size: 3.5rem;
     font-family: "BodoniMode";
 }
@@ -300,7 +306,7 @@ section {
 }
 
 .first-details {
-    margin-top: 4rem;
+    margin-top: .5rem;
 }
 
 .ceremony-title>p,
@@ -318,14 +324,20 @@ section {
 .ceremony-title>p:hover{
     color:lightseagreen;
 }
+.ceremony-title > p , .Cocktail-title > p{
+    margin-bottom: 0;
+}
 .underline-distance {
-    margin: 1rem 0;
+    margin: 0;
     color: red;
 }
-
 /* styling the siixth section*/
+.underline-distance-6 {
+    margin: 1rem 0 !important;
+    color: red;
+}
 .detail-title>h1 {
-    margin-top: 6rem;
+    margin-top: 4rem;
     font-size: 2.5rem;
     font-weight: 100;
     font-family: 'BodoniMode';
@@ -454,3 +466,42 @@ section {
     }
 
 }
+/* carousel */ 
+
+.carousel-control-prev-icon,  
+.carousel-control-next-icon {  
+    background-color: #000;  
+    border-radius: 50%;  
+    width: 4 0px;   
+    height: 40px;  
+}  
+
+.carousel-control-prev,  
+.carousel-control-next {  
+    width: 100px;   
+    height: 100px;  
+    opacity: 1;   
+    z-index: 10;   
+    top: 50%;  
+    transform: translateY(-50%);  
+}  
+
+.carousel-control-prev {  
+    left: 10px;  
+}  
+
+.carousel-control-next {  
+    right: 10px;  
+}  
+
+
+.carousel-indicators li {  
+    background-color: red !important;  
+    z-index: -1000;
+}  
+
+.carousel-indicators .active {  
+    background-color: darkred !important; 
+    z-index: -1000; 
+}
+

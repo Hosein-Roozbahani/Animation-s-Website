@@ -6,22 +6,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // const sr = ScrollReveal({
 //     origin: 'bottom',
 //     distance: '60px',
@@ -29,7 +13,7 @@
 //     delay: 500,
 //     reset: true
 // })
-// sr.reveal('.first-section , .second-section , .third-section, fourth-section, .fifth-section, .sixth-section');
+// sr.reveal('#first-section , #second-section , #third-section,#fourth-section, #fifth-section, #sixth-section');
 // sr.reveal('.titles-wedding ', {delay:600});
 // sr.reveal('.first-image ', {delay:999});
 // sr.reveal('.second-img ', {delay:999});
