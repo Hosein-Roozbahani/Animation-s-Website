@@ -4,9 +4,636 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animation's-Website</title>
+    <title>Wedding Invitation - Classic Simple Design</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+    <style>
+        @font-face {
+            font-family: 'BodoniMode-italic';
+            src: url('assets/fonts/BodoniModa-Italic-VariableFont_opsz\,wght.ttf') format('truetype');
+            font-style: italic;
+        }
+
+        @font-face {
+            font-family: 'BodoniMode';
+            src: url('assets/fonts/BodoniModa-VariableFont_opsz\,wght.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'GreatVibes-Regular';
+            src: url('assets/fonts/GreatVibes-Regular.ttf') format('truetype');
+        }
+
+        /* scroll styling */
+        html {
+            scrollbar-width: none;
+        }
+
+        *,
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul,
+        li,
+        ol {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        img {
+            transition: all .5s !important;
+        }
+
+        section {
+            height: 100vh;
+            scroll-snap-align: center !important;
+            animation: CSSscrollReveal ease-in-out both;
+            animation-timeline: view();
+            animation-range: entry 0% cover 50%;
+        }
+
+        .first-img {
+            width: 100%;
+            height: 60vh;
+            object-fit: cover;
+            transition: all .5s !important;
+            cursor: pointer;
+            clip-path: polygon(0 0, 100% 0, 100% 95%, 90% 90%, 80% 95%, 70% 90%, 60% 95%, 50% 90%, 40% 95%, 30% 90%, 20% 95%, 10% 90%, 0 95%, 0 100%);
+        }
+
+        .first-img:hover {
+            transform: scale(1.1) !important;
+        }
+
+        .second-img {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+        }
+
+        /* styling for the first-section*/
+
+        .logo-img {
+            width: 100%;
+            height: 9rem;
+            object-fit: contain;
+            cursor: pointer;
+            position: relative;
+            top: -1.7rem;
+            animation: logoAnimation 0.5s forwards;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        @media (min-width: 500px) {
+            .logo-img {
+                top: -1.4rem;
+            }
+        }
+
+        @media (min-width: 550px) {
+            .logo-img {
+                top: -1.2rem;
+            }
+        }
+
+        @media (min-width: 600px) {
+            .logo-img {
+                top: -1rem;
+            }
+        }
+
+        @media (min-width: 650px) {
+            .logo-img {
+                top: -.6rem;
+            }
+        }
+
+        @media (min-width: 700px) {
+            .logo-img {
+                top: -.4rem;
+            }
+        }
+
+        .titles-wedding {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* position: absolute; */
+            /* top: 50%;
+    left: 50%; */
+
+            /* transform: translate(-50%, -50%); */
+            padding: 12px 48px;
+            color: #fff;
+            background: linear-gradient(to right, #9f9f9f 0, #fff 10%, #868686 20%);
+            background-position: 0;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 3s infinite linear;
+            animation-fill-mode: forwards;
+            -webkit-text-size-adjust: none;
+            text-decoration: none;
+            white-space: nowrap;
+            text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.5), 0 0 25px rgba(255, 165, 0, 0.5);
+            margin-top: 10rem;
+        }
+
+        .first-section-title {
+            border-top: 2px solid lightslategray;
+
+        }
+
+        .second-section-title {
+            font-family: 'GreatVibes-Regular';
+            font-weight: 100;
+        }
+
+        .thrid-section-title {
+            border-bottom: 2px solid lightslategray;
+            padding-bottom: 10px;
+        }
+
+        .first-section-title,
+        .thrid-section-title {
+            font-family: 'BodoniMode';
+            font-weight: 200;
+            font-size: 2.2rem;
+        }
+
+        /* styling for the second-section*/
+        .first-image {
+            overflow: hidden;
+            position: relative;
+            transition: all .5s !important;
+        }
+
+        .titles-first-image {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            text-align: center;
+            z-index: 10;
+            font-weight: 100;
+            font-family: serif;
+            line-height: .3rem;
+        }
+
+        .couples-name {
+            text-align: center;
+            margin-top: 1rem;
+            cursor: pointer;
+            transition: all .5s;
+            text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.5), 0 0 25px rgba(255, 165, 0, 0.5);
+        }
+
+        .couples-name:hover {
+            transform: translateY(-20px);
+        }
+
+        .grooms-name,
+        .brides-name {
+            font-family: 'BodoniMode-italic';
+            font-weight: 500;
+            font-size: 4.5rem;
+            line-height: 3rem;
+        }
+
+        .distance-between-couples-name {
+            font-family: 'GreatVibes-Regular';
+            font-weight: 100;
+            font-size: 6rem;
+        }
+
+        /* styling the for the thrid section */
+        .third-section {
+            transition: all .5s;
+        }
+
+        .third-section:hover {
+            transform: scale(1.1);
+        }
+
+        .second-image {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .titles-and-dates {
+            position: absolute;
+            z-index: 10;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .titles-second-image {
+            color: #eaeaea;
+            text-align: center;
+            font-size: .8rem;
+            margin-top: 1.5rem;
+        }
+
+        .dates {
+            text-align: center;
+            margin-top: 20rem;
+        }
+
+        .dates>h1 {
+            line-height: 5rem;
+            color: #fff;
+            font-size: 5.5rem;
+            font-family: 'BodoniMode';
+            font-weight: 100;
+        }
+
+        .address {
+            color: #eaeaea;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        /* styling the for the fourth section */
+        #fourth-section,
+        #fifth-section,
+        #sixth-section {
+            text-align: center !important;
+        }
+
+        .please-word {
+            margin-top: 3rem;
+            font-weight: 100;
+        }
+
+        .R-S-V-P {
+            font-family: 'BodoniMode';
+            margin-top: 2.5rem;
+        }
+
+        .R-S-V-P>h1 {
+            font-size: 10rem;
+            line-height: 9rem;
+        }
+
+        .dates-and-emails {
+            margin: 2rem 0;
+            cursor: pointer;
+        }
+
+        .date {
+            font-size: 2rem;
+        }
+
+        .date>p {
+            margin-bottom: 0;
+        }
+
+        .Mindy-and-Chris {
+            transition: all .5s;
+            cursor: pointer;
+        }
+
+        .Mindy-and-Chris:hover {
+            font-size: 1.2rem;
+            color: blue;
+        }
+
+        .explained-from-the-bride-groom {
+            font-family: 'GreatVibes-Regular';
+            font-size: 2rem;
+            color: rgb(167, 167, 167);
+            margin-top: 4rem;
+            text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.5), 0 0 25px rgba(255, 165, 0, 0.5);
+            text-align: center;
+        }
+
+        /* styling the fifth section*/
+
+        .program-title>.title-of-fifth-section {
+            margin-top: .3rem;
+            font-size: 3.5rem;
+            font-family: "BodoniMode";
+        }
+
+        .time {
+            font-size: 2.5rem;
+            font-weight: 100;
+        }
+
+        .first-details {
+            margin-top: .5rem;
+        }
+
+        .ceremony-title>p,
+        .Cocktail-title>p {
+            font-family: "GreatVibes-Regular";
+            font-size: 3rem;
+            color: gray;
+            cursor: pointer;
+            transition: all .5s;
+        }
+
+        .Cocktail-title>p:hover {
+            color: lightseagreen;
+        }
+
+        .ceremony-title>p:hover {
+            color: lightseagreen;
+        }
+
+        .ceremony-title>p,
+        .Cocktail-title>p {
+            margin-bottom: 0;
+        }
+
+        .underline-distance {
+            margin: 0;
+            color: red;
+        }
+
+        /* styling the siixth section*/
+        .underline-distance-6 {
+            margin: 1rem 0 !important;
+            color: red;
+        }
+
+        .detail-title>h1 {
+            margin-top: 4rem;
+            font-size: 2.5rem;
+            font-weight: 100;
+            font-family: 'BodoniMode';
+        }
+
+        .details-reception {
+            margin-top: 5rem;
+
+        }
+
+        .titles-last-section {
+            transition: all .5s;
+            cursor: pointer;
+        }
+
+        .titles-last-section:hover {
+            color: lightseagreen;
+        }
+
+        .details-reception>h2 {
+            font-family: 'GreatVibes-Regular';
+            color: rgb(175, 175, 175);
+            font-size: 2rem;
+        }
+
+        .best-wedding-title>h2 {
+            font-family: 'GreatVibes-Regular';
+            color: rgb(175, 175, 175);
+            font-size: 2.5rem;
+        }
+
+        .websites-address {
+            font-size: 1.5rem;
+            margin-top: 6rem;
+            cursor: pointer;
+            transition: all .5s;
+        }
+
+        .websites-address-gradient {
+            background: linear-gradient(to right, red, lightblue);
+            background-clip: text;
+            color: transparent;
+        }
+
+        .websites-address>p:hover {
+            color: blue;
+            transition: all .5s;
+        }
+
+        /* styling the seveth-section*/
+        #seveth-section {
+            margin-left: 6rem !important;
+            margin: 5rem auto;
+        }
+        @media (min-width: 550px) {
+            #seveth-section {
+                margin-left: 8rem !important;
+            }
+        }
+        @media (min-width: 600px) {
+            #seveth-section {
+                margin-left: 9rem !important;
+            }
+        }
+        @media (min-width: 650px) {
+            #seveth-section {
+                margin-left: 10.5rem !important;
+            }
+        }
+        @media (min-width: 700px) {
+            #seveth-section {
+                margin-left: 12rem !important;
+            }
+        }
+        @media (min-width: 750px) {
+            #seveth-section {
+                margin-left: 13.5rem !important;
+            }
+        }
+        @media (min-width: 800px) {
+            #seveth-section {
+                margin-left: 15.5rem !important;
+            }
+        }
+        @media (min-width: 850px) {
+            #seveth-section {
+                margin-left: 17.5rem !important;
+            }
+        }
+        @media (min-width: 900px) {
+            #seveth-section {
+                margin-left: 18.5rem !important;
+            }
+        }
+        @media (min-width: 950px) {
+            #seveth-section {
+                margin-left: 20.5rem !important;
+            }
+        }
+        @media (min-width: 1000px) {
+            #seveth-section {
+                margin-left: 21.5rem !important;
+            }
+        }
+        @media (min-width: 1050px) {
+            #seveth-section {
+                margin-left: 23rem !important;
+            }
+        }
+        @media (min-width: 1150px) {
+            #seveth-section {
+                margin-left: 26.5rem !important;
+            }
+        }
+        @media (min-width: 1250px) {
+            #seveth-section {
+                margin-left: 30rem !important;
+            }
+        }
+        @media (min-width: 1350px) {
+            #seveth-section {
+                margin-left: 32.5rem !important;
+            }
+        }
+        @media (min-width: 1450px) {
+            #seveth-section {
+                margin-left: 35rem !important;
+            }
+        }
+        @media (min-width: 1550px) {
+            #seveth-section {
+                margin-left: 37rem !important;
+            }
+        }
+        @media (min-width: 1750px) {
+            #seveth-section {
+                margin-left: 39rem !important;
+            }
+        }
+        @media (min-width: 2000px) {
+            #seveth-section {
+                margin-left: 42rem !important;
+            }
+        }
+
+        /* Animation's */
+
+        @-moz-keyframes shine {
+            0% {
+                background-position: 0;
+            }
+
+            60% {
+                background-position: 180px;
+            }
+
+            100% {
+                background-position: 180px;
+            }
+        }
+
+        @-webkit-keyframes shine {
+            0% {
+                background-position: 0;
+            }
+
+            60% {
+                background-position: 180px;
+            }
+
+            100% {
+                background-position: 180px;
+            }
+        }
+
+        @-o-keyframes shine {
+            0% {
+                background-position: 0;
+            }
+
+            60% {
+                background-position: 180px;
+            }
+
+            100% {
+                background-position: 180px;
+            }
+        }
+
+        @keyframes shine {
+            0% {
+                background-position: 0;
+            }
+
+            60% {
+                background-position: 180px;
+            }
+
+            100% {
+                background-position: 180px;
+            }
+        }
+
+        @keyframes logoAnimation {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes CSSscrollReveal {
+            from {
+                opacity: 0;
+                transform: translateY(100px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        .animate__animated {
+            animation-delay: .7s;
+        }
+
+        /* carousel */
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 100px;
+            height: 100px;
+            opacity: 1;
+            z-index: 10;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 4rem;
+            border-radius: 50%;
+            margin: 0 -1rem;
+        }
+
+        .carousel-indicators .active {
+            background-color: black !important;
+            z-index: -1000;
+        }
+
+        .carousel-item {
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+
+        .carousel-item.active {
+            opacity: 1;
+        }
+
+        .carousel-item.show {
+            opacity: 1;
+        }
+    </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
 </head>
@@ -14,7 +641,8 @@
 <body>
     <main class="main">
 
-        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade " data-bs-ride="carousel"
+            data-interval="7000">
             <div class="carousel-indicators bg-light position-fixed bottom-0 z-0">
                 <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
@@ -28,6 +656,8 @@
                     aria-label="Slide 5"></button>
                 <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5"
                     aria-label="Slide 6"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="6"
+                    aria-label="Slide 7"></button>
 
             </div>
             <div class="carousel-inner">
@@ -92,7 +722,8 @@
                         <div class="Mindy-and-Chris animate__animated animate__backInLeft">Mindy&Chris@gmail.com</div>
                     </div>
                     <div class="explained-from-the-bride-groom">
-                        <p class="animate__animated animate__fadeInLeftBig">and kindly let us know if you wanna join us in
+                        <p class="animate__animated animate__fadeInLeftBig">and kindly let us know if you wanna join us
+                            in
                             this celebration of love</p>
                     </div>
                 </div>
@@ -147,21 +778,24 @@
                     </div>
                     <div class="details-reception">
                         <h2 class="titles-last-section animate__animated animate__fadeInRightBig">Reception</h2>
-                        <p class="information animate__animated animate__fadeInLeftBig">Join us for the reception immediately following the ceremony, we will be serving dinner,
+                        <p class="information animate__animated animate__fadeInLeftBig">Join us for the reception
+                            immediately following the ceremony, we will be serving dinner,
                             drinks, and dancing to celebrate our special day.</p>
                     </div>
                     <div>
                         <div class="underline-distance-6">__</div>
                         <div class="best-wedding-title">
                             <h2 class="titles-last-section animate__animated animate__fadeInRightBig">Best Wedding</h2>
-                            <p class="information animate__animated animate__fadeInLeftBig">We have secured a room block at Blake Hotel for our out-of-town guests. Please use the
+                            <p class="information animate__animated animate__fadeInLeftBig">We have secured a room block
+                                at Blake Hotel for our out-of-town guests. Please use the
                                 code 'BestWedd' when making your reservation.</p>
                         </div>
                     </div>
                     <div>
                         <div class="underline-distance-6">__</div>
                         <div>
-                            <p class="information animate__animated animate__fadeInLeftBig">For all additional information on shuttle services and wedding
+                            <p class="information animate__animated animate__fadeInLeftBig">For all additional
+                                information on shuttle services and wedding
                                 details, please visit our wedding website:</p>
                         </div>
                     </div>
@@ -169,197 +803,72 @@
                         <p class="websites-address-gradient">www.Mindy&Chris.com</p>
                     </div>
                 </div>
+                <div class="carousel-item animate__animated animate__backInUp text-center " id="seveth-section">
+                    <div class="card text-center" style="width: 20rem;">
+                        <img src="assets/images/A.jpg" class="card-img-top" alt="card-image">
+                        <div class="card-body">
+                            <p class="card-text text-secondary text-center fs-5">We can’t wait to celebrate with ​you
+                                and look forward to sharing ​this special day together.</p>
+                        </div>
+                    </div>
+
+                    <!-- <div class="groom&bride-speech">
+                        We can’t wait to celebrate with ​you and look forward to sharing ​this special day together.
+                    </div> -->
+                </div>
             </div>
 
-            <button class="carousel-control-prev position-fixed" type="button" data-bs-target="#carouselExampleFade"
+            <button class="carousel-control-prev position-fixed " type="button" data-bs-target="#carouselExampleFade"
                 data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
+                <span class=" text-black" aria-hidden="true">
+                    <</span> <span class="visually-hidden">Previous
+                </span>
             </button>
-            <button class="carousel-control-next position-fixed right-0" type="button" data-bs-target="#carouselExampleFade"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <button class="carousel-control-next position-fixed right-0 text-black" type="button"
+                data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                <span class="text-black" aria-hidden="true">></span>
                 <span class="visually-hidden">Next</span>
             </button>
 
-
-
-
-
-
-
-
-
-
-            <!-- <section class="first-section" id="first-section">
-            <div id="carouselExampleFade" class="carousel slide carousel-fade">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    
-                  </div>
-                  <div class="carousel-item">
-                    
-                  </div>
-                  <div class="carousel-item">
-                    
-                  </div>
-                </div>
-              </div>
-        </section> -->
-
-
-
-
-
-
-
-
-
-
-
-
-            <!-- <section class="first-section" id="first-section">
-            <span class="logo">
-                <img src="assets/images/logo1.jpg" class="logo-img" loading="lazy" alt="">
-            </span>
-            <div class="titles-wedding warpper" id="titles-wedding">
-                <h1 class="first-section-title">YOU'RE</h1>
-                <h2 class="second-section-title">WEDDING</h2>
-                <h1 class="thrid-section-title">INVITED</h1>
-            </div>
-        </section>
-    
-        <section class="second-section" id="second-section">
-            <div class="first-image animate__animated animate__fadeInUpBig">
-                <img src="assets/images/C.jpg" class="first-img" loading="lazy" alt="">
-                <div class="titles-first-image">
-                    <p class="firsts-line-of-title">To CELEBRATE THE</p>
-                    <p class="seconds-line-of-title">JOYOUS UNION OF</p>
-                </div>
-            </div>
-            <div class="couples-name">
-                <h1 class="grooms-name animate__animated animate__backInUp">MANDY</h1>
-                <h3 class="distance-between-couples-name animate__animated animate__backInUp">and</h3>
-                <h1 class="brides-name animate__animated animate__backInUp">CHRIS</h1>
-            </div>
-        </section>
-    
-        <section class="third-section" id="third-section">
-            <div class="second-image">
-                <img src="assets/images/B.jpg" class="second-img animate__animated animate__fadeInUpBig" loading="lazy" alt="">
-                <div class="titles-and-dates">
-                    <div class="titles-second-image">
-                        <h3>JOIN US ON</h3>
-                    </div>
-                    <div class="dates">
-                        <h1 class="the-date-1 animate__animated animate__fadeInDownBig">08.19</h1>
-                        <h1 class="the-date-2 animate__animated animate__fadeInDownBig">20XX</h1>
-                    </div>
-                    <div class="address">
-                        <p>At Six o'Clock In The Evening <br> At The Beautiful Evergreen Gardens Villa, <br> Wedding,CA</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-        <section class="fourth-section" id="fourth-section">
-            <div class="please-word">
-                <p class="animate__animated animate__backInRight">PLEASE</p>
-            </div>
-            <div class="R-S-V-P">
-                <h1 class="R-S animate__animated animate__backInDown">R S</h1>
-                <h1 class="V-P animate__animated animate__backInDown">V P</h1>
-            </div>
-            <div class="dates-and-emails">
-                <div class="date">
-                    <p class="animate__animated animate__backInRight">by JULY 15 to</p>
-                </div>
-                <div class="Mindy-and-Chris animate__animated animate__backInLeft">Mindy&Chris@gmail.com</div>
-            </div>
-            <div class="explained-from-the-bride-groom">
-                <p class="animate__animated animate__backInRight">and kindly let us know if you wanna join us in this
-                    celebration of love</p>
-            </div>
-        </section>
-    
-        <section class="fifth-section animate__animated animate__backInRight" id="fifth-section">
-            <div class="program-title">
-                <h1 class="title-of-fifth-section animate__animated animate__backInRight">PROGRAM</h1>
-            </div>
-            <div class="first-details">
-                <div class="first-timing">
-                    <h1 class="time ">11:00</h1>
-                </div>
-                <div class="ceremony-title">
-                    <p>Ceremony</p>
-                </div>
-                <ul class="Processional">
-                    <li>Processional</li>
-                    <li>Bride's Entrance</li>
-                    <li>ceremony</li>
-                    <li>Recessional</li>
-                </ul>
-            </div>
-            <div class="second-details">
-                <div class="underline-distance">__</div>
-                <div class="second-timing">
-                    <h1 class="time">14:00</h1>
-                </div>
-                <div class="Cocktail-title">
-                    <p>Cocktail</p>
-                </div>
-            </div>
-            <div class="last-detail">
-                <div class="underline-distance">__</div>
-                <div class="last-timing">
-                    <h1 class="time">15:00</h1>
-                </div>
-                <ul class="receptions">
-                    <li>Receptions</li>
-                    <li>Dinner Service</li>
-                    <li>Toasts</li>
-                    <li>First Dance</li>
-                    <li>Parent Dances</li>
-                    <li>Cake Cutting</li>
-                    <li>Dancing</li>
-                </ul>
-            </div>
-        </section>
-    
-        <section class="sixth-section animate__animated animate__backInRight" id="sixth-section">
-            <div class="detail-title">
-                <h1>DETAILS</h1>
-            </div>
-            <div class="details-reception">
-                <h2 class="titles-last-section">Reception</h2>
-                <p>join us for the reception immediately following the ceremony, we will be serving dinner, drinks and
-                    dancing to celebrate our special day.</p>
-            </div>
-            <div>
-                <div class="underline-distance">__</div>
-                <div class="best-wedding-title">
-                    <h2 class="titles-last-section">best-wedding</h2>
-                    <p>we have secured a room block at blake hotel for our out-of-town guests,please use the code 'BestWedd'
-                        when making your reservation</p>
-                </div>
-            </div>
-            <div>
-                <div class="underline-distance">__</div>
-                <div>
-                    <p class="information">for all additional information shuttle services and wedding details, please visit our wedding
-                        website: </p>
-                </div>
-            </div>
-            <div class="websites-address animate__animated animate__backInUp">
-                <p class="websites-address-gradient">www.Mindy&Chris.com</p>
-            </div>
-        </section> -->
     </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var myCarousel = document.querySelector('#carouselExampleFade');
+            var carousel = new bootstrap.Carousel(myCarousel, {
+                interval: 7000,
+                ride: 'carousel'
+            });
+        });
+
+        const carousel = document.getElementById('carouselExampleFade');
+        const images = carousel.getElementsByTagName('carousel-item');
+        let currentIndex = 0;
+
+        function moveToNextSlide() {
+            currentIndex = (currentIndex + 1) % images.length;
+            const translateXValue = -currentIndex * 100;
+            carousel.style.transform = `translateX(${translateXValue}%)`;
+        }
+
+        setInterval(moveToNextSlide, 7000);
+
+        window.addEventListener('load', moveToNextSlide);
+
+        // the dealy of running the animations
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var elements = document.querySelectorAll('.animated-item');
+
+            elements.forEach((element) => {
+                element.style.animationDelay = `.7s`; // تأخیر یکسان برای همه عناصر  
+                element.style.opacity = '1'; // نمایش محتوای جدید  
+                element.classList.add('animate__fadeIn'); // افزودن کلاس انیمیشن  
+            });
+        });
+    </script>
+
     <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/script.js"></script>
-    <!-- <script src="assets/js/scrollreveal.min.js"></script> -->
+    <!-- <script src="assets/js/script.js"></script> -->
 
 </body>
-
-
 </html>

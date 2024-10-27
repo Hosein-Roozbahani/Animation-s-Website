@@ -1,9 +1,8 @@
-@font-face {
+/* @font-face {
     font-family: 'BodoniMode-italic';
     src: url('/assets/fonts/BodoniModa-Italic-VariableFont_opsz\,wght.ttf') format('truetype');
     font-style: italic;
 }
-
 @font-face {
     font-family: 'BodoniMode';
     src: url('/assets/fonts/BodoniModa-VariableFont_opsz\,wght.ttf') format('truetype');
@@ -14,7 +13,7 @@
     src: url('/assets/fonts/GreatVibes-Regular.ttf') format('truetype');
 }
 
-/* scroll styling */
+
 html {  
     scrollbar-width: none; 
 } 
@@ -68,7 +67,7 @@ section {
     object-fit: cover;
 }
 
-/* styling for the first-section*/
+
 
 .logo-img{
     width: 100%;
@@ -111,11 +110,6 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* position: absolute; */
-    /* top: 50%;
-    left: 50%; */
-    
-    /* transform: translate(-50%, -50%); */
     padding: 12px 48px;
     color: #fff;
     background: linear-gradient(to right, #9f9f9f 0, #fff 10%, #868686 20%);
@@ -151,7 +145,6 @@ section {
     font-size: 2.2rem;
 }
 
-/* styling for the second-section*/
 .first-image {
     overflow: hidden;
     position: relative;
@@ -197,7 +190,6 @@ section {
     font-size: 6rem;
 }
 
-/* styling the for the thrid section */
 .third-section {
     transition: all .5s;
 }
@@ -245,7 +237,6 @@ section {
     margin-top: 3rem;
 }
 
-/* styling the for the fourth section */
 #fourth-section, #fifth-section, #sixth-section{
     text-align: center !important;
 }
@@ -292,8 +283,6 @@ section {
     text-align: center;
 }
 
-/* styling the fifth section*/
-
 .program-title>.title-of-fifth-section {
     margin-top: .3rem;
     font-size: 3.5rem;
@@ -331,7 +320,7 @@ section {
     margin: 0;
     color: red;
 }
-/* styling the siixth section*/
+
 .underline-distance-6 {
     margin: 1rem 0 !important;
     color: red;
@@ -382,9 +371,6 @@ section {
     color: blue;
     transition: all .5s;
 }
-
-
-/* Animation's */
 
 @-moz-keyframes shine {
     0% {
@@ -466,15 +452,6 @@ section {
     }
 
 }
-/* carousel */ 
-
-.carousel-control-prev-icon,  
-.carousel-control-next-icon {  
-    background-color: #000;  
-    border-radius: 50%;  
-    width: 4 0px;   
-    height: 40px;  
-}  
 
 .carousel-control-prev,  
 .carousel-control-next {  
@@ -483,25 +460,14 @@ section {
     opacity: 1;   
     z-index: 10;   
     top: 50%;  
-    transform: translateY(-50%);  
-}  
-
-.carousel-control-prev {  
-    left: 10px;  
-}  
-
-.carousel-control-next {  
-    right: 10px;  
-}  
-
-
-.carousel-indicators li {  
-    background-color: red !important;  
-    z-index: -1000;
+    transform: translateY(-50%); 
+    font-size: 4rem; 
+    border-radius: 50%; 
+    margin: 0 -1rem;
 }  
 
 .carousel-indicators .active {  
-    background-color: darkred !important; 
+    background-color: black !important; 
     z-index: -1000; 
 }
-
+ */
